@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    font-family: "Quicksand";
+    background-color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+
+/* ----   HEADER ---- */
+
+header {
+    height: 30px;
+    width: 100%;
+}
+
+header ul {
+    margin : 0;
+    padding : 0;
+    list-style-type : none;
+    float : right;
+}
+
+header ul li {
+    display : inline-block;    
+    width: 65px;    
+    line-height: 30px;
+    text-decoration: none; 
+    text-align: center;
+    padding: 0 40px;
+    }
+
+header ul li:hover {
+    background-color : #aaa;
+}
+
+
+/* ---- HERO ---- */
+
+.hero {
+    padding-top: 20px;
+    height: 40vh;
+}
+
+
+/* ---- GALLERY ---- */
+
+.gallery {
+    height: 20vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.gallery .photo {    
+    float: left;
+    width: 30%;
+    margin-right: 5%; 
+}
+
+.gallery .photo img {
+    object-fit: cover;
+    height: 20vh;
+    width: 100%;
+}
+
+
+.gallery .photo:last-of-type {
+    margin-right: 0;
+}
+
+
+/* ---- MAP ---- */
+.map {
+    margin-bottom: 20px;    
+}
+
+.map img {
+    object-fit: cover;
+    width: 100%;
+}
+
+
+/* ---- FOOTER ---- */
+
+footer {
+    width: 100%;
+    text-align: center;    
+}
+
+
+
+/* ---------------- for TABLETS --------------------- */
+
+@media(min-width: 768px) and (max-width: 991px) {
+
+    /* ----   HEADER ---- */
+    
+    header ul li {
+        padding: 0 20px;
+    }
+    
+    
+    /* ---- GALLERY ---- */
+    
+    .gallery .photo {    
+        float: left;
+        width: 32%;
+        margin-right: 2%; 
+    }
+
+}
+
+
+/* ---------------------- for PHONES -------------------- */
+
+@media(max-width: 767px) {
+
+    .container {
+        text-align: center;
+    }
+
+
+    /* ----   HEADER ---- */  
+    
+    header {
+        height: auto;
+    }
+    
+    header ul {
+        float : none;
+    }
+    
+    header ul li {
+        display : block;
+        width: 100%;        
+        padding: 0;
+    }
+    
+    /* ---- GALLERY ---- */
+    
+    .gallery { 
+        height: auto;        
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 0 5px;
+    }
+    
+    .gallery .photo {
+        float:none;
+        width: 100%;
+        margin: 0;    
+    }
+
+ 
+}
+
+
+
+
+/* ---- CLear fix ---- */
+
+.row::before, .row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
